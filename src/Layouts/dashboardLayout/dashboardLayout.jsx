@@ -1,7 +1,11 @@
 import { Outlet } from 'react-router'
 import './dashboardLayout.css'
+import { useAuth } from '@clerk/clerk-react'
 
-const DashboardLayout = () => {
+const dashboardLayout = () => {
+
+  const {userId} = useAuth()
+
   return (
     <div className='dashboardLayout'>
         <div className="menu">MENU</div>
@@ -12,4 +16,4 @@ const DashboardLayout = () => {
   )
 }
 
-export default DashboardLayout
+export default dashboardLayout
